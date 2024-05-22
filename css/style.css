@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #202124;
+}
+
+input {
+    border-radius: 5px;
+    height: 35px;
+    color : #fff;
+}
+
+button , i{
+    cursor: pointer;
+}
+
+/****** HEADER ******/
+header h1 {
+    color : #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+i{
+    color : white;
+ }
+ 
+.search-notes {
+    display: flex;
+    align-items: center;
+    gap : 10px;
+}
+
+
+.search-notes input {
+    width: 300px;
+    border: none;
+    background-color: #333;
+}
+
+.file-export {
+    display: flex;
+    align-items: center;
+    color : #fff;
+    justify-content: center;
+    background-color: #333;
+    gap : 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border : none;
+}
+
+.write-notes {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.write-notes input {
+    width: 350px;
+    background-color : #333;
+}
+
+.add-note {
+    background-color: #333;
+    color : #fff;
+    padding: 8px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+
+.container-notes {
+    border-radius: 10px;
+    display: flex;
+    color : #fff;
+    gap : 30px;
+    flex-wrap: wrap;
+    margin : 10px 30px;
+}
+
+.notes {
+    background-color: #202124;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    min-height: 200px;
+    padding: 16px;
+    position: relative;
+}
+
+.notes textarea {
+    background-color: transparent;
+    resize: none;
+    border: none;
+    color : #fff;
+    outline: none;
+    overflow: hidden;
+    height: auto;
+}
+
+.notes .bi-pin {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #333;
+    padding: 5px;
+}
+
+.notes .bi-x {
+    position: absolute;
+    top : 10px;
+    right: 10px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.notes .bi-file-earmark-plus {
+    position: absolute;
+    top : 40px;
+    right: 10px;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.notes:hover > i{
+    opacity: 1;
+}
