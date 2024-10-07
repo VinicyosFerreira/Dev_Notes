@@ -41,7 +41,6 @@ i{
     gap : 10px;
 }
 
-
 .search-notes input {
     width: 300px;
     border: none;
@@ -78,23 +77,22 @@ i{
     border-radius: 5px;
 }
 
-
 .container-notes {
-    border-radius: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , 200px);
+    justify-content: center;
     color : #fff;
     gap : 30px;
-    flex-wrap: wrap;
-    margin : 10px 30px;
+    margin : 10px auto;
+    max-width: 1400px;
 }
 
 .notes {
+    border-radius: 10px;
     background-color: #202124;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 200px;
     min-height: 200px;
-    padding: 16px;
+    padding: 1rem;
     position: relative;
 }
 
@@ -102,10 +100,10 @@ i{
     background-color: transparent;
     resize: none;
     border: none;
+    overflow : hidden;
     color : #fff;
     outline: none;
-    overflow: hidden;
-    height: auto;
+    height: 100%;
 }
 
 .notes .bi-pin {
@@ -135,3 +133,32 @@ i{
 .notes:hover > i{
     opacity: 1;
 }
+
+@media screen and (max-width: 600px) {
+    header h1{
+        width: 100px;
+    }
+
+    .search-notes input {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .write-notes input {
+        width: 250px;
+    }
+
+    .container-notes {
+        grid-template-columns: repeat(2 , 170px);
+        gap: 20px;
+    }
+
+    .notes {
+        min-height: 150px;
+    }
+}
+
+
+
+
+
