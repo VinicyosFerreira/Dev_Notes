@@ -80,7 +80,6 @@ i{
 .container-notes {
     display: grid;
     grid-template-columns: repeat(auto-fit , 200px);
-    justify-content: center;
     color : #fff;
     gap : 30px;
     margin : 10px auto;
@@ -134,7 +133,7 @@ i{
     opacity: 1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
     header h1{
         width: 100px;
     }
@@ -149,8 +148,11 @@ i{
     }
 
     .container-notes {
+        max-width: 100%;
+        margin: 0 auto;
         grid-template-columns: repeat(2 , 170px);
         gap: 20px;
+        justify-content: center;
     }
 
     .notes {
@@ -158,6 +160,11 @@ i{
     }
 }
 
+@media screen and (max-width : 1400px) {
+    .container-notes {
+        justify-content: center;
+    }
+}
 
 
 
